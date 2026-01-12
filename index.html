@@ -11,7 +11,7 @@
 
     <div class="alert-box" id="alert">
         <p id="text">알림창임</p>
-        <button onclick="닫기()">닫기</button>
+        <button id="close">닫기</button>
     </div>
     <button onclick="idPwMake('아이디를 입력하세요')">아이디</button>
     <button onclick="idPwMake('비밀번호를 입력하세요')">비밀번호</button>
@@ -21,9 +21,10 @@
             document.getElementById('text').innerText = textInput;
             document.getElementById('alert').style.display = 'block';
         }
-        function 닫기() {
+
+        document.getElementById('close').addEventListener('click', function () {
             document.getElementById('alert').style.display = 'none';
-        }
+        })
 
     </script>
 
