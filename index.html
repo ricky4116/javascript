@@ -81,21 +81,20 @@
     </nav>
 
     <script>
-
+        // var Function-scoped 재선언 O 재할당 0
+        // let { Block-scoped} 재선언 X 재할당 0
+        // const { Block-scoped} 재선언 X 재할당 X
         var count = 0;
 
         $('.badge').on('click', function () {
             count += 1;
-            change(count);
-        })
-
-        function change(count) {
             if (count % 2 == 1) {
-                $('.bg-dark').css('color', 'Light');
+                $('.badge').html('Light 🔄');
             } else {
-                $('.bg-dark').css('color', 'Dark');
+                $('.badge').html('Dark 🔄')
             }
-        }
+        });
+
     </script>
 
     <ul class="list-group" id="test1">
