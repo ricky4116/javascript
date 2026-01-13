@@ -36,29 +36,29 @@
 
 
     <script>
-        삼육구게임(27);
-        function 삼육구게임(num) {
-            if (num % 9 == 0) {
-                console.log('박수박수');
-            } else if (num % 3 == 0) {
-                console.log('박수')
-            } else {
-                console.log('통과');
-            }
-        }
+        // 삼육구게임(27);
+        // function 삼육구게임(num) {
+        //     if (num % 9 == 0) {
+        //         console.log('박수박수');
+        //     } else if (num % 3 == 0) {
+        //         console.log('박수')
+        //     } else {
+        //         console.log('통과');
+        //     }
+        // }
 
-        function 합격했냐(test1, test2) {
-            if (test1 < 40 || test2 < 40) {
-                console.log('불합격');
-            } else if ((test1 + test2) < 120) {
-                console.log('불합격');
-            } else {
-                console.log('합격');
-            }
-        }
-        합격했냐(70, 70)
-        합격했냐(30, 100)
-        합격했냐(50, 50)
+        // function 합격했냐(test1, test2) {
+        //     if (test1 < 40 || test2 < 40) {
+        //         console.log('불합격');
+        //     } else if ((test1 + test2) < 120) {
+        //         console.log('불합격');
+        //     } else {
+        //         console.log('합격');
+        //     }
+        // }
+        // 합격했냐(70, 70)
+        // 합격했냐(30, 100)
+        // 합격했냐(50, 50)
 
         $('form').on('submit', function () {
             if (document.getElementById('email').value == '') {
@@ -72,12 +72,32 @@
     </script>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand">Navbar</span>
+            <span class="navbar-brand">JSSHOP</span>
+            <span class="badge bg-dark">Dark 🔄</span>
             <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
+
+    <script>
+
+        var count = 0;
+
+        $('.badge').on('click', function () {
+            count += 1;
+            change(count);
+        })
+
+        function change(count) {
+            if (count % 2 == 1) {
+                $('.bg-dark').css('color', 'Light');
+            } else {
+                $('.bg-dark').css('color', 'Dark');
+            }
+        }
+    </script>
+
     <ul class="list-group" id="test1">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
@@ -85,6 +105,7 @@
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
     </ul>
+
 
     <div class="main-bg">
         <h4>Shirts on Sale</h4>
@@ -96,14 +117,13 @@
 
 
     <script>
-
         $('#login').on('click', function () {
             $('.black-bg').addClass('show-modal');
-        });
+        })
 
         $('#close').on('click', function () {
             $('.black-bg').removeClass('show-modal');
-        });
+        })
 
         document.querySelector('.navbar-toggler').addEventListener('click', function () {
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
