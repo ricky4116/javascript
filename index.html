@@ -84,6 +84,25 @@
         // var Function-scoped 재선언 O 재할당 0
         // let { Block-scoped} 재선언 X 재할당 0
         // const { Block-scoped} 재선언 X 재할당 X
+
+        // var 예금액 = 60000;
+        // var 미래예금액 = 0;
+        // if (예금액 < 50000) {
+        //     미래예금액 = 예금액 * 1.15 * 1.15;
+        // } else {
+        //     미래예금액 = 예금액 * 1.2 * 1.2;
+        // }
+
+        // console.log(미래예금액)
+
+        // var first = 360;
+        // var total = 0;
+
+        // total = first + first * 2 / 3 + first * 2 / 3 * 2 / 3
+
+        // console.log(total)
+
+
         var count = 0;
 
         $('.badge').on('click', function () {
@@ -111,10 +130,6 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
-
-
-
-
     <script>
         $('#login').on('click', function () {
             $('.black-bg').addClass('show-modal');
@@ -128,7 +143,23 @@
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
         })
 
+    </script>
 
+
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+
+    <script>
+        var QuizCount = 0;
+        $('#send-answer').on('click', function () {
+            QuizCount += 1;
+            if (document.getElementById('answer').value == 1335) {
+                alert('성공');
+            } else if (QuizCount >= 3) {
+                alert('멍청아');
+            }
+        })
     </script>
 
 
