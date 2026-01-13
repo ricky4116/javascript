@@ -36,6 +36,30 @@
 
 
     <script>
+        삼육구게임(27);
+        function 삼육구게임(num) {
+            if (num % 9 == 0) {
+                console.log('박수박수');
+            } else if (num % 3 == 0) {
+                console.log('박수')
+            } else {
+                console.log('통과');
+            }
+        }
+
+        function 합격했냐(test1, test2) {
+            if (test1 < 40 || test2 < 40) {
+                console.log('불합격');
+            } else if ((test1 + test2) < 120) {
+                console.log('불합격');
+            } else {
+                console.log('합격');
+            }
+        }
+        합격했냐(70, 70)
+        합격했냐(30, 100)
+        합격했냐(50, 50)
+
         $('form').on('submit', function () {
             if (document.getElementById('email').value == '') {
                 alert('아이디를 입력하세요');
