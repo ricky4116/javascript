@@ -130,7 +130,25 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
+    <div class="alert alert-danger">
+        <span id="count-number">5</span>초 이내 구매시 사은품 증정!
+    </div>
+
+
+
     <script>
+        var cm = 5;
+
+        var 타이머 = setInterval(function () {
+            cm--;
+            $('#count-number').html(cm);
+            if (cm <= 0) {
+                $('.alert').hide();
+            }
+        }, 1000);
+
+
+
         $('#login').on('click', function () {
             $('.black-bg').addClass('show-modal');
         })
@@ -142,6 +160,8 @@
         document.querySelector('.navbar-toggler').addEventListener('click', function () {
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
         })
+
+
 
     </script>
 
